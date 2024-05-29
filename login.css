@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=DM%20Sans');
+*{
+    margin: 0px;
+}
+body {
+    background-image: url("bg.jpg");
+    color: white;
+    font-family: DM Sans, cursive;
+}
+.form {
+    height: 600px;
+    width: 550px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    align-items: center;
+    background-color: rgb(22, 21, 21);
+    border-radius: 15px;
+    padding: 25px 10px;
+    box-shadow: 0 0 25px rgb(80, 79, 79);
+    justify-content: center;
+}
+.login-form {
+    height: 500px;
+    width: 550px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    align-items: center;
+    background-color: rgb(22, 21, 21);
+    border-radius: 15px;
+    padding: 25px 10px;
+    box-shadow: 0 0 25px rgb(80, 79, 79);
+    justify-content: center;
+}
+.login-input-box{
+    height: 85%;
+    width: 70%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.login-input-box-split{
+    width: 100%;
+    height: 16%;
+    display: flex;
+    justify-content: center;
+}
+.login-input-box-split-2{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.login-input-box-split-2-1{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    flex-direction: column;
+}
+.login-input-box-split-2-2{
+    height: 20%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-input {
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    margin: 5px;
+    padding-left: 10px;
+    font-size: 18px;
+    color: black;
+    background-color: #D3D7DF;
+}
+.login-input:focus {
+    border-color:#6e8095;
+    outline: none;
+}
+.login-button {
+    background: linear-gradient(to right, #3C06D4, white);
+    border: none;
+    padding: 8px 70px;
+    border-radius: 10px;
+    font-size: 18px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 10px;
+}
+.register-button {
+    background: linear-gradient(to right, #3C06D4, white);
+    border: none;
+    padding: 8px 70px;
+    border-radius: 10px;
+    font-size: 18px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 10px;
+    width: 88%;
+    margin-left: 6px;
+}
+.container{
+    width: 100%;
+    height: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
