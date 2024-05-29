@@ -1,5 +1,5 @@
 # Vēlmes
-Kods pārveidots uz localhost.
 
+better luck next time.
 
-http://norbertuhs.atwebpages.com/Velmes/login.php ;)
+https://velmes.kvd.lv/ ;)
