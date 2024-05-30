@@ -78,7 +78,7 @@ if (!isset($_SESSION["login"]) || $_SESSION["login"] !== true) {
         var isValid = true;
         $('.input-fields').each(function() {
             if ($(this).val() === '') {
-                showError($(this).attr('id'), 'Nepieciešams aizpildīt šo lauku!');
+                showError($(this).attr('id'), 'Nepieciešams aizpildīt!');
                 isValid = false;
             }
         });
