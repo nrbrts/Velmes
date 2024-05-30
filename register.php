@@ -59,7 +59,7 @@
         }
 
         if (!email) {
-            document.getElementById('emailError').innerText = 'Nepieciešams ēpasts';
+            document.getElementById('emailError').innerText = 'Nepieciešams e-pasts';
             document.getElementById('emailError').style.display = 'block';
             event.preventDefault();
             setTimeout(function() {
@@ -70,7 +70,7 @@
 
         var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailPattern.test(email)) {
-            document.getElementById('emailError').innerText = 'Nepareizs ēpasta formāts';
+            document.getElementById('emailError').innerText = 'Nepareizs e-pasta formāts';
             document.getElementById('emailError').style.display = 'block';
             event.preventDefault();
             setTimeout(function() {
