@@ -203,7 +203,81 @@
     flex-wrap: wrap;
     justify-content: center;
 }
+.box5-container {
+    margin-top: 6%;
+    border: none;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0px 0px 100px 0px rgba(119, 203, 185, 0.25);
+    height: 500px;
+    width: 500px;
+    color: papayawhip;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
+.box5-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.box5-input-box {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.box5-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.box5-label {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.box5-input {
+    height: 40px;
+    width: 200px;
+    margin: 8px 0;
+    padding: 10px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 4px;
+    background-color: white;
+}
+
+.box5-submitdiv {
+    text-align: center;
+}
+
+.box5-button {
+    background: linear-gradient(to right, #77CBB9, white);
+    border: none;
+    padding: 4px 30px;
+    border-radius: 10px;
+    font-size: 18px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 10px;
+    height: 45px;
+}
+
+.box5-message {
+    margin-top: 15px;
+    font-size: 14px;
+    color: green;
+}
+
+.box5-message p {
+    margin: 0;
+}
 .input-fields {
     height: 40px;
     width: 70%;
