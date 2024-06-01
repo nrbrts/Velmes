@@ -37,7 +37,7 @@ if (!isset($_SESSION["login"]) || $_SESSION["login"] !== true) {
             echo "<p>$description</p>";
             echo "</div>";
             echo "<div class='half'>";
-            echo "<p>Price: $price</p>";
+            echo "<p>$price</p>";
             echo "</div>";
             echo "</div>";
 
