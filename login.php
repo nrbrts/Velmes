@@ -48,7 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="star.png">
     <link rel="stylesheet" href="login.css">
-    <title>Velmes pievienošanās</title>
+    <title>Velmes</title>
 </head>
 <body>
     <div class="container">

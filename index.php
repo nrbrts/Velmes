@@ -44,10 +44,10 @@ if (!isset($_SESSION["login"]) || $_SESSION["login"] !== true) {
                 echo "</div><br>";
                 echo "<div class='box2'>";
                 echo "<div class='box-half'>";
-                echo "Name: " . $name . "<br>";
+                echo "Nosaukums: " . $name . "<br>";
                 echo "</div><br>";
                 echo "<div class='box-half2'>";
-                echo "Price: " . $price . "<br>";
+                echo "Cena: " . $price . "<br>";
                 echo "</div><br>";
                 echo "</div><br>";
                 echo "<div class='box3'>";

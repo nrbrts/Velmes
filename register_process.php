@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $stmt->bind_param("sss", $username2, $hashed_password, $email);
 
             if ($stmt->execute()) {
-                $_SESSION["username2"] = $username2; // Set the session variable here
+                $_SESSION["username2"] = $username2; 
                 header("Location: login.php");
                 exit();
             } else {
