@@ -488,6 +488,7 @@
 .item-details-box h2, .item-details-box p {
     margin: 10px 0;
     background-color: transparent;
+    word-wrap: break-word;
 }
 
 .item-details-box .buttons {

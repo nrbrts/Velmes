@@ -25,10 +25,10 @@ if (!isset($_SESSION["login"]) || $_SESSION["login"] !== true) {
                 <div class="split">
                     <div class="input-box">
                         <label for="name">Nosaukums:</label>
-                        <input id="name" class="input-fields" type="text" name="name" required>
+                        <input id="name" class="input-fields" type="text" name="name" required minlength="3" maxlength="20">
 
                         <label for="price">Cena:</label>
-                        <input id="price" class="input-fields" type="number" name="price" step="0.01" min="0.01" max="100000" required>
+                        <input id="price" class="input-fields" type="number" name="price" step="0.01" min="0.01" max="10000000" required>
 
                         <label for="description">Apraksts:</label>
                         <textarea id="description" class="input-fields" name="description" minlength="2" style="resize: none; height: 70px;" required></textarea>
@@ -76,12 +76,26 @@ if (!isset($_SESSION["login"]) || $_SESSION["login"] !== true) {
 
     function validateForm() {
         var isValid = true;
+        var maxInputValue = 999999999;
+        var price = parseFloat($("#price").val());
+
+        if ($("#name").val().length > maxInputValue) {
+            showError("name", "Nosaukums ir pārāk garš!");
+            isValid = false;
+        }
+
+        if (price > maxInputValue) {
+            showError("price", "Cena ir pārāk liela!");
+            isValid = false;
+        }
+
         $('.input-fields').each(function() {
             if ($(this).val() === '') {
                 showError($(this).attr('id'), 'Nepieciešams aizpildīt!');
                 isValid = false;
             }
         });
+
         return isValid;
     }
 
