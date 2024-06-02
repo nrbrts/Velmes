@@ -95,7 +95,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         if (response == "success") {
                             $('#formMessage').html('<span style="color: red;">Kaut kas nesanāca. Mēģini vēlreiz!</span>');
                         } else {
-                            $('#formMessage').html('<span style="color: green;">Tev izdevās!</span>');
+                            $('#formMessage').html('<span style="color: #66ff00;">Tev izdevās!</span>');
                         }
                     }
                 });
