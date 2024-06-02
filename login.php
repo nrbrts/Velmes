@@ -35,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $passwordError = "Nepareiza parole!";
             }
         } else {
-            $usernameError = "Profils nēksistē!";
+            $usernameError = "Profils neeksistē!";
         }
     }
 }
