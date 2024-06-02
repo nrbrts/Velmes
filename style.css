@@ -303,7 +303,54 @@
     text-align: center;
     flex-direction: column;
 }
+.ideju-kaste{
+    height: 400px;
+    width: 300px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 10%;
+    align-items: center;
+}
+.styled-box {
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    display: none;
+    text-align: center;
+    height: 300px;
+    width: 350px;
+}
+.styled-box h3 {
+    margin-top: 0;
+}
+.styled-box img {
+    margin-top: 20px;
+    max-width: 130px;
+    height: auto;
+    max-height: 200px;
+}
+.random-poga {
+    width: 160px;
+    height: 40px;
+    background-color: #bf8bff;
+    border: none; 
+    color: white; 
+    text-align: center;
+    text-decoration: none;
+    display: inline-block; 
+    font-size: 16px;
+    margin: 4px 2px; 
+    cursor: pointer; 
+    border-radius: 12px;
+    transition-duration: 0.4s;
+}
 
+.random-poga:hover {
+    background-color: #00FFFF;
+    color: black;
+}
 .button {
     background: linear-gradient(to right, #77CBB9, white);
     border: none;

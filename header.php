@@ -23,7 +23,7 @@ $username2 = $_SESSION["username2"];
             <div class="header-bottom">
                 <div class="header-bottom-top">
                     <a href="index.php" class="redirect"><?php echo $username2 . "'s Vēlmes"; ?></a>
-                    <a href="Ideas.php" class="redirect">Idejas</a>
+                    <a href="Ideas.php" class="redirect">Idejas vēlmēm</a>
                     <a href="settings.php" class="redirect">Iestatījumi</a>
                     <a href="insert.php" class="redirect">Vēlmes pievienošana</a>
                 </div>
