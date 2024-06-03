@@ -575,21 +575,15 @@
     }
     .header-top {
         height: 100%;
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
     .header-top p {
         font-size: 30px;
     }
-    .header:hover .header-bottom {
-        display: flex;
-        flex-direction: column;
-    }
-
     .dropdown-button {
         display: block;
-        position: absolute;
-        top: 0;
-        right: 0;
         background: none;
         border: none;
         color: papayawhip;
@@ -597,8 +591,31 @@
         padding: 10px;
         cursor: pointer;
     }
-    .show-dropdown .header-dropdown {
-        display: block;
+    .header-dropdown {
+        display: none;
+        flex-direction: column;
+        background-color: #141414;
+        position: absolute;
+        width: 100%;
+        top: 60px;
+        left: 0;
+        z-index: 1000;
+    }
+    .show-dropdown {
+        display: flex;
+        align-content: flex-end;
+        flex-wrap: wrap;
+        width: 250px;
+        margin-top: 30px;
+    }
+    .header-dropdown a {
+        padding: 10px;
+        color: papayawhip;
+        text-decoration: none;
+        text-align: center;
+    }
+    .header-dropdown a:hover {
+        background-color: rgba(255, 255, 255, 0.1);
     }
     .insert-box {
         width: 90%;
@@ -613,41 +630,52 @@
     .boxes {
         width: 33%;
     }
-    .velmes-title{
+    .velmes-title {
         margin-top: 20px;
         margin-left: 40px;
     }
 }
-
 @media screen and (max-width: 1000px) {
-    .header {
+    /* .header {
         width: auto;
         position: static;
     }
-
     .header-bottom {
         display: none;
-    }
-
-    .header-top {
+    } */
+    /* .header-top {
         height: 100%;
         align-items: center;
         justify-content: center;
     }
-
     .header-top p {
         font-size: 30px;
     }
-
     .header:hover .header-bottom {
         display: flex;
         flex-direction: column;
-    }
+    } */
     .input-box {
         width: 100%;
     }
     .split2 {
         align-items: center;
+    }
+    .show-dropdown {
+        display: flex;
+        align-content: flex-end;
+        flex-wrap: wrap;
+        width: 250px;
+        margin-top: 30px;
+    }
+    .header-dropdown a {
+        padding: 10px;
+        color: papayawhip;
+        text-decoration: none;
+        text-align: center;
+    }
+    .header-dropdown a:hover {
+        background-color: rgba(255, 255, 255, 0.1);
     }
     .button {
         width: 70%;
@@ -667,7 +695,6 @@
         padding: 10px;
         cursor: pointer;
     }
-
     .show-dropdown .header-dropdown {
         display: block;
     }
@@ -676,11 +703,11 @@
     .boxes {
         width: 60%;
     }
-    .velmes-title{
+    .velmes-title {
         margin-top: 20px;
         margin-left: 40px;
     }
-    .item-details-box{
+    .item-details-box {
         margin: 20px auto;
         padding: 20px;
         background-color: #FBFFB9;
@@ -692,10 +719,9 @@
         text-align: center;
     }
 }
-
 @media screen and (max-width: 600px) {
-    .header-bottom-top{
-        margin-top: 20px ;
+    /* .header-bottom-top {
+        margin-top: 20px;
         height: 26%;
         width: 45%;
         display: flex;
@@ -712,6 +738,22 @@
     .header {
         width: 100%;
         height: 10%;
+    } */
+    .show-dropdown {
+        display: flex;
+        align-content: flex-end;
+        flex-wrap: wrap;
+        width: 250px;
+        margin-top: 30px;
+    }
+    .header-dropdown a {
+        padding: 10px;
+        color: papayawhip;
+        text-decoration: none;
+        text-align: center;
+    }
+    .header-dropdown a:hover {
+        background-color: rgba(255, 255, 255, 0.1);
     }
     .main {
         margin-left: 0;
@@ -730,7 +772,7 @@
     .input-fields {
         width: 70%;
     }
-    .item-details-box{
+    .item-details-box {
         margin: 20px auto;
         padding: 20px;
         background-color: #FBFFB9;
@@ -748,10 +790,9 @@
         top: 0;
         width: 100%;
         height: 100%;
-        overflow: auto; 
-        background-color: rgba(0,0,0,0.4);
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.4);
     }
-    
     .modal-content {
         background-color: #141414;
         margin: 15% auto;
@@ -763,30 +804,19 @@
     }
     .cancel-button {
         height: 40px;
-        width: 80px;
-        background-color: green;
-        border: 1px solid black;
-        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #888;
+        border-radius: 6px;
         cursor: pointer;
-        color: white;
     }
-    .delete-button {
-        height: 40px;
-        width: 80px;
-        background-color: red;
-        border: 1px solid black;
-        margin-top: 10px;
-        cursor: pointer;
-        color: white;
+    .cancel-button:hover {
+        background-color: white;
+        color: black;
     }
-    .modal-half{
-        height: 30%;
-        width: 100%;
-        text-align: center;
-    }
-    .modal-half2{
-        height: 70%;
-        width: 100%;
-        text-align: center;
+    .velmes-title {
+        margin-top: 20px;
+        margin-left: 40px;
     }
 }

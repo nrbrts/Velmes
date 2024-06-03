@@ -76,7 +76,7 @@ if (!isset($_SESSION["login"]) || $_SESSION["login"] !== true) {
 
     function validateForm() {
         var isValid = true;
-        var maxInputValue = 999999999;
+        var maxInputValue = 9999999;
         var price = parseFloat($("#price").val());
 
         if ($("#name").val().length > maxInputValue) {
