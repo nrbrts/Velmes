@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: fdb34.awardspace.net
--- Generation Time: May 28, 2024 at 01:32 PM
+-- Generation Time: Jun 03, 2024 at 08:15 PM
 -- Server version: 5.7.40-log
 -- PHP Version: 8.1.28
 
@@ -31,19 +31,8 @@ CREATE TABLE `items_contact` (
   `id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `message` text NOT NULL
+  `message` text CHARACTER SET utf8 NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `items_contact`
---
-
-INSERT INTO `items_contact` (`id`, `name`, `email`, `message`) VALUES
-(1, 'sew', 'varbut.smily@gmail.com', 'niger'),
-(2, 'arnolds wiesulis', 'stabsgeorgs@gmail.com', 'kuilis'),
-(3, 'sew', 'varbut.smily@gmail.com', 'ninin'),
-(4, 'marks', 'epasts@epasts.lv', 'dzo baidens???? wtfff'),
-(5, 'tostergeion', 'tostermaizitesfans@gmail.com', 'Tev što?i viss k?rt?b??');
 
 --
 -- Indexes for dumped tables
@@ -63,7 +52,7 @@ ALTER TABLE `items_contact`
 -- AUTO_INCREMENT for table `items_contact`
 --
 ALTER TABLE `items_contact`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
