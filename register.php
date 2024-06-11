@@ -136,9 +136,10 @@
                 setTimeout(function() {
                     document.getElementById('usernameError').style.display = 'none';
                 }, 3000);
+            } else if (data === 'success') {
+                window.location.href = 'login.php'; // Redirect to login page after successful registration
             } else {
-                // aizpildas forma, ja lietotajs ir pieejams
-                document.getElementById('registerForm').submit();
+                console.error('Unexpected response:', data);
             }
         })
         .catch(error => {
