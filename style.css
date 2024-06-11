@@ -661,6 +661,11 @@
     .split2 {
         align-items: center;
     }
+    .insert-box {
+        width: 70%;
+        margin: 10px auto;
+        padding: 15px;
+    }
     .show-dropdown {
         display: flex;
         align-content: flex-end;
@@ -706,6 +711,11 @@
     .velmes-title {
         margin-top: 20px;
         margin-left: 40px;
+    }
+    .insert-box {
+        width: 80%;
+        margin: 10px auto;
+        padding: 15px;
     }
     .item-details-box {
         margin: 20px auto;
@@ -765,6 +775,10 @@
     }
     .boxes {
         width: 84%;
+    }.insert-box {
+        width: 100%;
+        margin: 10px auto;
+        padding: 15px;
     }
     .input-box {
         width: 100%;
@@ -814,9 +828,5 @@
     .cancel-button:hover {
         background-color: white;
         color: black;
-    }
-    .velmes-title {
-        margin-top: 20px;
-        margin-left: 40px;
     }
 }
