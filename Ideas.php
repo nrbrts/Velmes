@@ -7,13 +7,17 @@ if (!isset($_SESSION["login"]) || $_SESSION["login"] !== true) {
 
 include 'db.php';
 
-$randomItem = null;
 if (isset($_POST['getRandomItem'])) {
     $sql = "SELECT * FROM items2 ORDER BY RAND() LIMIT 1";
     $result = $conn->query($sql);
-    
+
     if ($result->num_rows > 0) {
         $randomItem = $result->fetch_assoc();
+        echo json_encode($randomItem);
+        exit();
+    } else {
+        echo json_encode(['error' => 'Nav ideju']);
+        exit();
     }
 }
 ?>
@@ -34,25 +38,40 @@ if (isset($_POST['getRandomItem'])) {
     <div class="main" id="main-content">
         <div class="ideju-kaste">
             <h2 style="text-align: center;"></h2>
-            <form style="text-align: center;" method="post">
-                <button type="submit" name="getRandomItem" class="random-poga">Nejauša vēlme?</button>
+            <form style="text-align: center;" id="randomItemForm">
+                <button type="button" id="getRandomItem" class="random-poga">Nejauša vēlme?</button>
             </form>
             <div class="styled-box" id="random-item-box">
                 <p style="font-size: 20px; margin-top: 10px;"><strong>Nosaukums: </strong><span id="item-name"></span></p>
                 <p style="font-size: 20px; margin-top: 10px;"><strong>Cena: </strong><span id="item-price"></span></p>
-                <p><strong></strong> <img id="item-photo" src="" alt="random velmes bilde"></p>
+                <p><strong></strong> <img id="item-photo" src="" alt="nejausas velmes bilde"></p>
             </div>
         </div>
     </div>
 
     <script>
         $(document).ready(function() {
-            <?php if ($randomItem): ?>
-                $('#item-name').text('<?php echo htmlspecialchars($randomItem['name']); ?>');
-                $('#item-price').text('<?php echo htmlspecialchars($randomItem['price']); ?>');
-                $('#item-photo').attr('src', '<?php echo htmlspecialchars($randomItem['photo']); ?>');
-                $('#random-item-box').show();
-            <?php endif; ?>
+            $('#getRandomItem').on('click', function() {
+                $.ajax({
+                    type: 'POST',
+                    url: '',
+                    data: { getRandomItem: true },
+                    dataType: 'json',
+                    success: function(response) {
+                        if (response.error) {
+                            alert(response.error);
+                        } else {
+                            $('#item-name').text(response.name);
+                            $('#item-price').text(response.price);
+                            $('#item-photo').attr('src', response.photo);
+                            $('#random-item-box').show();
+                        }
+                    },
+                    error: function() {
+                        alert('Error retrieving item');
+                    }
+                });
+            });
         });
     </script>
 </body>
