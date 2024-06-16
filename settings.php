@@ -16,6 +16,13 @@ $userId = $_SESSION['id'];
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $newUsername = $_POST['username2'];
     $newPassword = $_POST['password2'];
+
+    // Validate password
+    if (strlen($newPassword) < 8 || !preg_match('/[a-zA-Z]/', $newPassword) || !preg_match('/\d/', $newPassword)) {
+        http_response_code(400);
+        echo "Parolei jābūt vismaz 8 simboliem garai un saturēt vismaz vienu burtu, un vienu ciparu!";
+        exit();
+    }
     
     $hashedPassword = password_hash($newPassword, PASSWORD_DEFAULT);
     
@@ -40,7 +47,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     exit();
 }
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -90,6 +96,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     $('#message').html('');
                 }, 3000);
                 return; 
+            }
+
+            if (password.length < 8 || !/[a-zA-Z]/.test(password) || !/\d/.test(password)) {
+                $('#message').html('<p style="color: red; width: 200px;">Parolei jābūt vismaz 8 simboliem garai un saturēt vismaz vienu burtu, un vienu ciparu!</p>');
+                setTimeout(function() {
+                    $('#message').html('');
+                }, 3000);
+                return;
             }
 
             $.ajax({
