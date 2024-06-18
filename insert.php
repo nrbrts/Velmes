@@ -84,8 +84,12 @@ if (!isset($_SESSION["login"]) || $_SESSION["login"] !== true) {
             isValid = false;
         }
 
+        if (isNaN(price) || price < 0.01 || price > maxInputValue) {
+                showError("price", "Cena ir par mazu!");
+                isValid = false;
+        }
         if (price > maxInputValue) {
-            showError("price", "Cena ir pārāk liela!");
+            showError("price", "Cena ir par lielu!");
             isValid = false;
         }
 

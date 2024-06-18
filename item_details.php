@@ -42,7 +42,7 @@ if (!isset($_SESSION["login"]) || $_SESSION["login"] !== true) {
             echo "</div>";
 
             echo "<div class='buttons'>";
-            echo "<button class='button2' onclick=\"window.location.href='" . $link . "'\">Apmeklēt</button>";
+            echo "<a href='" . $link . "' target='_blank'><button class='button2'>Apmeklēt</button></a>";
             echo "<button class='button2' onclick='openModal()'>Dzēst</button>";
             echo "<button class='button2' onclick='history.back()'>Atgriezties</button>";
             echo "</div>";
